@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">Com.Duarti.XamarinApp</string>
+
+  <string name="app_name">My Application</string>
+
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+
+  <string name="action_settings">Settings</string>
+  <string name="action_view_map">View maps</string>
+  <string name="title_activity_maps">Map</string>
+</resources>
