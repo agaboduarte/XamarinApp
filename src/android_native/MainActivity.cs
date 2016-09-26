@@ -10,6 +10,7 @@ using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V4.View;
 using Android.Gms.Maps;
+using Android.Graphics;
 
 namespace Com.Duarti.XamarinApp
 {
@@ -45,7 +46,11 @@ namespace Com.Duarti.XamarinApp
 
             var drawer = (DrawerLayout)FindViewById(Resource.Id.drawer_layout);
             var toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+                this,
+                drawer,
+                toolbar, 
+                Resource.String.navigation_drawer_open,
+                Resource.String.navigation_drawer_close);
 
             drawer.AddDrawerListener(toggle);
 
@@ -113,27 +118,24 @@ namespace Com.Duarti.XamarinApp
 
             if (id == Resource.Id.nav_camera)
             {
-                // Handle the camera action
+                var intent = CameraActivity.NewIntent(ApplicationContext);
+
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_gallery)
             {
-
             }
             else if (id == Resource.Id.nav_slideshow)
             {
-
             }
             else if (id == Resource.Id.nav_manage)
             {
-
             }
             else if (id == Resource.Id.nav_share)
             {
-
             }
             else if (id == Resource.Id.nav_send)
             {
-
             }
 
             var drawer = (DrawerLayout)FindViewById(Resource.Id.drawer_layout);

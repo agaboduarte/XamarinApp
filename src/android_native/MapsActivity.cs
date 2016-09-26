@@ -16,7 +16,7 @@ using Android.Support.V7.Widget;
 
 namespace Com.Duarti.XamarinApp
 {
-    [Activity(Label = "Maps", Icon = "@drawable/icon", Theme = "@style/AppTheme.NoActionBar", ParentActivity = typeof(MainActivity))]
+    [Activity(Label = "Maps", Theme = "@style/AppTheme.NoActionBar", ParentActivity = typeof(MainActivity))]
     public class MapsActivity : AppCompatActivity, IOnMapReadyCallback
     {
         public GoogleMap Map { get; protected set; }
@@ -56,9 +56,9 @@ namespace Com.Duarti.XamarinApp
             Map.MyLocationEnabled = true;
         }
 
-        public static Intent NewIntent(Context applicationContext)
+        public static Intent NewIntent(Context context)
         {
-            var intent = new Intent(applicationContext, typeof(MapsActivity));
+            var intent = new Intent(context, typeof(MapsActivity));
 
             return intent;
         }
