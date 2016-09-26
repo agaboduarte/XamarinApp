@@ -9,12 +9,20 @@ using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V4.View;
+using Android.Gms.Maps;
 
 namespace Com.Duarti.XamarinApp
 {
     [Activity(Label = "XamarinApp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        protected Android.Widget.RelativeLayout ContentMain
+        {
+            get
+            {
+                return FindViewById<Android.Widget.RelativeLayout>(Resource.Id.content_main);
+            }
+        }
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -88,9 +96,9 @@ namespace Com.Duarti.XamarinApp
 
             if (id == Resource.Id.action_view_map)
             {
-                var mapIntent = new Intent(this, typeof(MapsActivity));
+                var intent = MapsActivity.NewIntent(ApplicationContext);
 
-                StartActivity(mapIntent);
+                StartActivity(intent);
 
                 return true;
             }
