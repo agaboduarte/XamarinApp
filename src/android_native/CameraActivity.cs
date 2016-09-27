@@ -19,7 +19,7 @@ namespace Com.Duarti.XamarinApp
     {
 
         private Camera mCamera;
-        private CameraPreview mPreview;
+        private CameraView mPreview;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -52,7 +52,7 @@ namespace Com.Duarti.XamarinApp
                 }
 
                 // Create our Preview view and set it as the content of our activity.
-                mPreview = new CameraPreview(this, mCamera);
+                mPreview = new CameraView(this, mCamera);
                 var preview = (ViewGroup)FindViewById(Resource.Id.camera_preview);
                 preview.AddView(mPreview);
             }

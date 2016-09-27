@@ -89,8 +89,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camera2\AutoFitTextureView.cs" />
+    <Compile Include="Camera2\Camera2Activity.cs" />
+    <Compile Include="Camera2\CameraStateCallback.cs" />
     <Compile Include="CameraActivity.cs" />
-    <Compile Include="CameraPreview.cs" />
+    <Compile Include="CameraView.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MapsActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

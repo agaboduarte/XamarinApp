@@ -124,6 +124,9 @@ namespace Com.Duarti.XamarinApp
             }
             else if (id == Resource.Id.nav_gallery)
             {
+                var intent = Camera2Activity.NewIntent(ApplicationContext);
+
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_slideshow)
             {

@@ -12,11 +12,11 @@ using Android.Util;
 
 namespace Com.Duarti.XamarinApp
 {
-    public class CameraPreview : SurfaceView, ISurfaceHolderCallback
+    public class CameraView : SurfaceView, ISurfaceHolderCallback
     {
         private Android.Hardware.Camera mCamera { get; set; }
       
-        public CameraPreview(Context context, Android.Hardware.Camera camera)
+        public CameraView(Context context, Android.Hardware.Camera camera)
             : base(context)
         {
             mCamera = camera;
